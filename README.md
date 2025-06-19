@@ -1,3 +1,3 @@
-# Simon Says
+# Projects
 
-this repo has file related to project simon says 
+Here are the projects i have built during leaning phase

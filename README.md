@@ -1,2 +1,3 @@
-# Projects
-Here are all the projects i have built during learning phase
+# Simon Says
+
+this repo has file related to project simon says 

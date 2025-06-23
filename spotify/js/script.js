@@ -130,14 +130,17 @@ async function main() {
         document.querySelector('.songtime').innerHTML = `${formatTime(currentSong.currentTime)} : ${formatTime(currentSong.duration)}`;
         document.querySelector('.circle').style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
     });
-    currentSong.addEventListener('ended', () => {
+    
+   currentSong.addEventListener('ended', () => {
         let currentIndex = songs.indexOf(currentSong.src.split('/').pop());
         let nextIndex = currentIndex + 1;
-
-        else {
-            playMusic(songs[0]); 
-}
-});
+    
+        if (nextIndex < songs.length) {
+            playMusic(songs[nextIndex]);
+        } else {
+            playMusic(songs[0]); // start again from the beginning
+        }
+    });
 
     document.querySelector('.seekbar').addEventListener('click', e => {
         let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
